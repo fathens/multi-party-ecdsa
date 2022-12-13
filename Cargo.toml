@@ -35,7 +35,7 @@ zk-paillier = { path = "../zk-paillier", version = "*" }
 round-based = { version = "0.1", features = [] }
 thiserror = "1.0"
 derivative = "2"
-sha2 = "0.10.6"
+sha2 = "0.9"
 
 [dependencies.paillier]
 path = "../rust-paillier"
@@ -45,12 +45,12 @@ default-features = false
 
 [dev-dependencies]
 criterion = "0.4"
-aes-gcm = "0.10"
+aes-gcm = "0.9.4"
 hex = "0.4"
 tokio = { version = "1", default-features = false, features = ["macros"] }
 futures = "0.3"
 rocket = { version = "0.5.0-rc.2", default-features = false, features = ["json"] }
-reqwest = { version = "0.11.13", default-features = false }
+reqwest = { version = "0.9", default-features = false }
 uuid = { version = "1.2.2", features = ["v4"] }
 serde_json = "1.0"
 rand = "0.8"
@@ -61,6 +61,11 @@ structopt = "0.3"
 
 thiserror = "1.0"
 round-based = { version = "0.1", features = ["dev"] }
+
+[dev-dependencies.secp256k1]
+version = "0.24"
+default-features = false
+features = ["serde", "rand-std", "global-context"]
 
 [[example]]
 name = "gg18_sm_manager"
