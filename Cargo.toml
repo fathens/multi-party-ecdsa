@@ -29,17 +29,17 @@ crate-type = ["lib"]
 subtle = { version = "2" }
 serde = { version = "1.0", features = ["derive"] }
 zeroize = "1"
-curv-kzen = { path = "../curv", version = "*" }
-centipede = { path = "../centipede", version = "*" }
-zk-paillier = { path = "../zk-paillier", version = "*" }
+curv-kzen = { git = "https://github.com/fathens/curv", branch = "wasm" }
+centipede = { git = "https://github.com/fathens/centipede", branch = "wasm" }
+zk-paillier = { git = "https://github.com/fathens/zk-paillier", branch = "wasm" }
 round-based = { version = "0.1", features = [] }
 thiserror = "1.0"
 derivative = "2"
 sha2 = "0.9"
 
 [dependencies.paillier]
-path = "../rust-paillier"
-version = "*"
+git = "https://github.com/fathens/rust-paillier"
+branch = "wasm"
 package = "kzen-paillier"
 default-features = false
 
